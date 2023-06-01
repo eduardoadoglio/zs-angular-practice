@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  node:
+    #    build: ../
+    image: andrechavesg/angular:latest
+    environment:
+      - NODE_ENV=development
+    working_dir: /home/node/app
+    command: bash -c "npm install && npm build"
+    volumes:
+      - "../:/home/node/app:delegated"
+      - "../node_modules:/home/node/app/node_modules:cached"
+    ports:
+      - 4200:80
