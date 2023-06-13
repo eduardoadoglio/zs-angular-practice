@@ -1,0 +1,8 @@
+<div class="card-wrapper">
+  <form [formGroup]="formGroup" (ngSubmit)="signup()">
+    <input type="text" formControlName="email" placeholder="Insira seu e-mail">
+    <input type="password" formControlName="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+    <input type="password" formControlName="confirm_password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+    <input type="submit" value="Enviar">
+  </form>
+</div>
