@@ -8,15 +8,3 @@ services:
       - "./node_modules:/home/node/app/node_modules:cached"
     ports:
       - 4200:4200
-#  node:
-##    build: ../
-#    image: andrechavesg/angular:latest
-#    environment:
-#      - NODE_ENV=development
-#    working_dir: /home/node/app
-#    command: bash -c "npm install && ng serve --host 0.0.0.0 --port 4200 --disable-host-check"
-#    volumes:
-#      - "./:/home/node/app:delegated"
-#      - "./node_modules:/home/node/app/node_modules:cached"
-#    ports:
-#      - 4200:80
