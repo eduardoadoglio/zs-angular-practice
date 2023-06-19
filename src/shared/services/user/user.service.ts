@@ -16,10 +16,7 @@ export class UserService {
   }
 
   getMe() {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
-    })
-    return this.httpClient.get(`${this.apiUrl}me/`, {headers: headers})
+    return this.httpClient.get(`${this.apiUrl}me/`)
       .pipe(
         map((response: any) => {
           return new User({...response})
