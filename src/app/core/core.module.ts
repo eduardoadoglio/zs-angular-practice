@@ -1,6 +1,7 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {HttpInterceptorService} from "./services/http-interceptor/http-interceptor.service";
 
 
 
@@ -10,6 +11,14 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     CommonModule,
     HttpClientModule
+  ],
+  providers: [
+    HttpInterceptorService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true,
+    }
   ]
 })
 export class CoreModule {
