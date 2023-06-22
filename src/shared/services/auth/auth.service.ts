@@ -2,9 +2,9 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable, tap} from "rxjs";
 import {Router} from "@angular/router";
-import {User} from "../../../models/user";
-import {SignUpModel} from "../../../models/signup";
-import {Credentials} from "../../../models/credentials";
+import {User} from "../../models/user";
+import {SignUpModel} from "../../models/signup";
+import {Credentials} from "../../models/credentials";
 
 @Injectable({
   providedIn: 'root'
