@@ -42,5 +42,10 @@ export class AuthService {
     localStorage.setItem('refreshTokenExpiration', JSON.stringify(credentials.refreshTokenExpiration));
   }
 
+  isAuthorized(): boolean {
+    const credentials = new Credentials().fromLocalStorage();
+    return !!credentials.accessToken && credentials.accessTokenExpiration.getTime() < new Date(Date.now()).getTime();
+  }
+
 
 }
