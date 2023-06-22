@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'zs-home',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  absoluteRef(id: string): string {
+    return `url(${window.location.href}#${id})`;
+  }
+
+  getPatternUrl(id: string): string {
+    return `url(${window.location.href}#${id})`;
+  }
 
 }
