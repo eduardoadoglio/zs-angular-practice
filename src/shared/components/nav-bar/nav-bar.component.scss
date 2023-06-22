@@ -1,0 +1,24 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  background-color: rgba(20, 71, 90, 0.8);
+
+  color: white;
+
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    button {
+      color: white;
+    }
+  }
+}
