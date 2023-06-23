@@ -44,7 +44,7 @@ export class AuthService {
 
   isAuthorized(): boolean {
     const credentials = new Credentials().fromLocalStorage();
-    return !!credentials.accessToken && credentials.accessTokenExpiration.getTime() < new Date(Date.now()).getTime();
+    return !!credentials.accessToken && credentials.accessTokenExpiration.getTime() > new Date(Date.now()).getTime();
   }
 
 
