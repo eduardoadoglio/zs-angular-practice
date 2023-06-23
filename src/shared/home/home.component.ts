@@ -6,13 +6,4 @@ import {Component} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  absoluteRef(id: string): string {
-    return `url(${window.location.href}#${id})`;
-  }
-
-  getPatternUrl(id: string): string {
-    return `url(${window.location.href}#${id})`;
-  }
-
 }

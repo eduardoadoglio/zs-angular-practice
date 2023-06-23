@@ -1,9 +1,9 @@
 <div class="top-bar" [ngClass]="{'hide': !isAuthorized}">
-  <div class="logo">
+  <div class="logo" routerLink="home/">
     ZapSign Lite
   </div>
   <div class="actions">
-    <button mat-button routerLink="users/">Usuários</button>
+    <button mat-button routerLink="user/">Usuários</button>
     <button mat-button routerLink="companies/">Companies</button>
     <button mat-button routerLink="documents/">Docs</button>
     <button mat-button routerLink="/auth/logout">Sair</button>

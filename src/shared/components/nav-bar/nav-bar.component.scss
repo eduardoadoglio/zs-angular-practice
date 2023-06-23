@@ -2,7 +2,6 @@
   display: none !important;
 }
 
-
 .top-bar {
   position: fixed;
   top: 0;
@@ -12,11 +11,16 @@
   justify-content: space-between;
   align-items: center;
 
+  height: 40px;
   width: calc(100% - 20px);
   padding: 5px 10px;
   background-color: rgba(20, 71, 90, 0.8);
 
   color: white;
+
+  .logo {
+    cursor: pointer;
+  }
 
 
   .actions {

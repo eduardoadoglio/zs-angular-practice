@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {map, tap} from "rxjs";
+import {map, Observable, tap} from "rxjs";
 import {Credentials} from "../../models/credentials";
 import {User} from "../../models/user";
 
@@ -22,5 +22,18 @@ export class UserService {
           return new User({...response})
         }),
       );
+  }
+
+  list(): Observable<User[]> {
+    return this.httpClient.get(this.apiUrl).pipe(
+      map((users: any) => {
+          try {
+            return users.map((user: any) => new User({...user}))
+          } catch (e) {
+            return [];
+          }
+        }
+      )
+    );
   }
 }
