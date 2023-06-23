@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormGroup} from "@angular/forms";
-import {AuthService} from "../services/auth/auth.service";
+import {AuthService} from "../../services/auth/auth.service";
 import {User} from "../../models/user";
 import {Router} from "@angular/router";
 import {setUser} from "../../stores/user/user.action";
