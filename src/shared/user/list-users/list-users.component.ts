@@ -11,7 +11,6 @@ import {User} from "../../models/user";
 export class ListUsersComponent implements OnInit {
 
   users$: Observable<User[]> = new Observable<User[]>();
-  displayedColumns: string[] = ['id', 'e-mail', 'created'];
   constructor(private userService: UserService) {
   }
 

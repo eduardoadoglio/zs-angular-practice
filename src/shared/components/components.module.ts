@@ -10,25 +10,34 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {RouterLink} from "@angular/router";
 import {MatListModule} from "@angular/material/list";
+import { GenericTableComponent } from './generic-table/generic-table.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
+import {MatTableModule} from "@angular/material/table";
 
 
 
 @NgModule({
   declarations: [
-    NavBarComponent
+    NavBarComponent,
+    GenericTableComponent
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent,
+    GenericTableComponent
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    RouterLink,
-    MatListModule
-  ]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        RouterLink,
+        MatListModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatTableModule
+    ]
 })
 export class ComponentsModule { }

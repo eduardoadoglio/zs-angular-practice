@@ -1,0 +1,27 @@
+.table-wrapper {
+
+  max-height: 80vh;
+
+  border: 5px #436c7b solid;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #436c7b;
+    color: white;
+
+
+    .title h1 {
+      margin: 0;
+    }
+  }
+
+  .table-body {
+    th:last-child {
+      text-align: center;
+    }
+  }
+}
