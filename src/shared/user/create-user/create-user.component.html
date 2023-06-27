@@ -1,0 +1,19 @@
+<div class="zs-center-content">
+    <form class="create-user-form" [formGroup]="formGroup" (ngSubmit)="createUser()">
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email">
+        <mat-error *ngIf="formGroup.get('email')?.invalid">
+          {{getErrorMessage(formGroup.controls['email'])}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-error *ngIf="formGroup.get('password')?.invalid">
+          {{getErrorMessage(formGroup.controls['password'])}}
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="formGroup.invalid">Criar</button>
+    </form>
+</div>

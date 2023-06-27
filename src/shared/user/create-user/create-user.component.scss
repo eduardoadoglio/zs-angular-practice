@@ -1,0 +1,12 @@
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  width: 40%;
+
+  mat-form-field {
+    width: 100%;
+  }
+}

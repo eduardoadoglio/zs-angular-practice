@@ -6,20 +6,28 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {ComponentsModule} from "../components/components.module";
+import { CreateUserComponent } from './create-user/create-user.component';
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
 @NgModule({
   declarations: [
-    ListUsersComponent
+    ListUsersComponent,
+    CreateUserComponent
   ],
-    imports: [
-        CommonModule,
-        UserRoutingModule,
-        MatTableModule,
-        MatSortModule,
-        MatPaginatorModule,
-        ComponentsModule
-    ]
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    ComponentsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule
+  ]
 })
 export class UserModule { }

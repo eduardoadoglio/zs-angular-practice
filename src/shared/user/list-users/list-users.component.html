@@ -1,11 +1,7 @@
-<div class="container" *ngIf="users$ | async as users">
-
-  <div class="example-table-container" >
+<div class="zs-center-content" *ngIf="users$ | async as users">
     <zs-generic-table
       title="Usuários"
       [dataSource]="users"
-      [columns]="['id', 'email', 'created_at']">
+      [columns]="['id', 'email', 'created_at', 'updated_at', 'password_updated_at', 'is_email_verified']">
     </zs-generic-table>
-  </div>
-
 </div>

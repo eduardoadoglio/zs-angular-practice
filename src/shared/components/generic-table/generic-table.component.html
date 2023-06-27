@@ -12,7 +12,7 @@
   </div>
 
   <div class="table-body">
-    <table mat-table [dataSource]="dataSource"
+    <table mat-table [dataSource]="matTableDatasource"
            matSort matSortActive="created" matSortDisableClear matSortDirection="desc">
       <ng-container *ngFor="let column of columns" [matColumnDef]="column">
         <th mat-header-cell *matHeaderCellDef>{{column}}</th>
@@ -33,6 +33,6 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [length]="dataSource?.length" [pageSize]="30"></mat-paginator>
+    <mat-paginator #paginator [pageSize]="6"></mat-paginator>
   </div>
 </div>

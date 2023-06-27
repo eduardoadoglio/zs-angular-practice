@@ -36,4 +36,15 @@ export class UserService {
       )
     );
   }
+
+  create(user: User): Observable<User> {
+    return this.httpClient.post(this.apiUrl, {
+      'email': user.email,
+      'password': user.password
+    }).pipe(
+      map((response: any) => {
+        return new User({...response})
+      })
+    )
+  }
 }

@@ -1,10 +1,17 @@
 .table-wrapper {
 
+  display: flex;
+  flex-direction: column;
+
+  height: 80vh;
   max-height: 80vh;
+
+  min-width: 50vw;
 
   border: 5px #436c7b solid;
   border-radius: 20px;
   padding-bottom: 10px;
+
   .table-header {
     display: flex;
     justify-content: space-between;
@@ -20,6 +27,10 @@
   }
 
   .table-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     th:last-child {
       text-align: center;
     }

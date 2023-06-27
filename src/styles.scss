@@ -9,6 +9,16 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.zs-center-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .mat-button.mat-success,
 .mat-stroked-button.mat-success {
   color: #28a745;
