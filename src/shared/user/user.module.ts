@@ -10,13 +10,15 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
+import { DetailUserComponent } from './detail-user/detail-user.component';
 
 
 
 @NgModule({
   declarations: [
     ListUsersComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    DetailUserComponent
   ],
   imports: [
     CommonModule,

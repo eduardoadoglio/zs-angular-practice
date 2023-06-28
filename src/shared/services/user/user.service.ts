@@ -15,6 +15,14 @@ export class UserService {
   ) {
   }
 
+  get(id: string | number): Observable<User> {
+    return this.httpClient.get(`${this.apiUrl}${id.toString()}/`)
+      .pipe(
+        map((response: any) => {
+          return new User({...response})
+        }),
+      );
+  }
   getMe() {
     return this.httpClient.get(`${this.apiUrl}me/`)
       .pipe(
